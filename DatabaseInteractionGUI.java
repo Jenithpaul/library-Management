@@ -18,7 +18,7 @@ import java.sql.*;
 public class DatabaseInteractionGUI extends JFrame {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/library";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "monkey@work"; // Change this to your actual password
+    private static final String PASSWORD = "YourPassword"; // Change this to your actual password
 
     private Connection conn;
 
