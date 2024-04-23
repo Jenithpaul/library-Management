@@ -1,0 +1,24 @@
+-- Table: student
+CREATE TABLE student (
+    USN VARCHAR(20) NOT NULL PRIMARY KEY,
+    Student_name VARCHAR(100)
+);
+
+-- Table: books
+CREATE TABLE books (
+    Book_id INT NOT NULL PRIMARY KEY,
+    Author_Name VARCHAR(255),
+    Title VARCHAR(255),
+    Available TINYINT(1) DEFAULT 1
+);
+
+-- Table: borrowing_records
+CREATE TABLE borrowing_records (
+    Borrowed_by VARCHAR(100),
+    Book_id INT,
+    Returned TINYINT(1) DEFAULT 0,
+    Borrowed_Date DATE,
+    Returned_Date DATE,
+    FOREIGN KEY (Borrowed_by) REFERENCES student(USN),
+    FOREIGN KEY (Book_id) REFERENCES books(Book_id)
+);
